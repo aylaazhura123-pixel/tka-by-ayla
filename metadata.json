@@ -1,0 +1,8 @@
+{
+  "name": "TKA 17 Days — Mastery Mission",
+  "description": "17 Hari. Satu Misi. Kuasai TKA. Web app belajar interaktif bertema Superhero Laba-Laba dengan blurting method, digital notebook estetik, latihan soal HOTS, timer misi, dan sound system interaktif.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

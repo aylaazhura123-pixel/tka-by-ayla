@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, .font-heading {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Notebook paper textures */
+.bg-notebook-grid {
+  background-color: #fdfbf7;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-notebook-ruled {
+  background-color: #fdfbf7;
+  background-image: linear-gradient(to bottom, transparent 27px, #e2e8f0 28px);
+  background-size: 100% 28px;
+}
+
+.bg-spider-grid {
+  background-size: 40px 40px;
+  background-image: 
+    radial-gradient(circle, rgba(225, 29, 72, 0.15) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Custom glowing effects */
+.spider-glow {
+  box-shadow: 0 0 25px -5px rgba(225, 29, 72, 0.4), 0 0 10px -2px rgba(2, 132, 199, 0.3);
+}
+
+.spider-glow-lg {
+  box-shadow: 0 0 45px -5px rgba(225, 29, 72, 0.5), 0 0 20px -2px rgba(2, 132, 199, 0.4);
+}
+
+.blue-glow {
+  box-shadow: 0 0 25px -5px rgba(2, 132, 199, 0.45);
+}
+
+/* Spider web pattern SVG background */
+.web-overlay {
+  background-image: radial-gradient(rgba(225, 29, 72, 0.1) 15%, transparent 16%), radial-gradient(rgba(2, 132, 199, 0.1) 15%, transparent 16%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+/* Animated keyframes */
+@keyframes webShoot {
+  0% { transform: scale(0.2) translateY(20px); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+@keyframes spiderPulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(225, 29, 72, 0.4)); }
+  50% { transform: scale(1.04); filter: drop-shadow(0 0 18px rgba(225, 29, 72, 0.7)); }
+}
+
+@keyframes webSwing {
+  0%, 100% { transform: rotate(-5deg); transform-origin: top center; }
+  50% { transform: rotate(5deg); transform-origin: top center; }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-spider-pulse {
+  animation: spiderPulse 2.5s ease-in-out infinite;
+}
+
+.animate-web-swing {
+  animation: webSwing 3s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(225, 29, 72, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(225, 29, 72, 0.8);
+}
